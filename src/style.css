@@ -1,10 +1,15 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-.card {
-  height: 75vh;
+
+.card-container {
+  height: 428px;
+  width: 300px;
+  max-width: 95vw;
+  max-height: 200vh;
+  container: cardcont / size;
 }
 
-.card-font {
-  font-size: 5rem;
+.main {
+  height: 95vh;
 }
 
 .rotated {
@@ -12,5 +17,37 @@
 }
 
 .counter {
-  width: 10%;
+  width: 50px;
+}
+
+/* ////////////////// */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ////////////////////// */
+
+@container cardcont ((width > 153px)) {
+  .card-font {
+    font-size: 20cqh;
+  }
+}
+@container cardcont ((height > 214px)) {
+  .card-font {
+    font-size: 20cqh;
+  }
+}
+/* container issue fixes */
+@container cardcont ((height > 1500px)) {
+  .card-font {
+    font-size: 20cqw;
+  }
+}
+@container cardcont ((width < 200px)) {
+  .card-font {
+    font-size: 25cqi;
+  }
 }

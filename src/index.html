@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Poker Card Generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -31,24 +31,25 @@
   </head>
   <body class="bg-success">
     <div class="text-center d-flex flex-column align-items-center">
-      <div
-        class="card col-5 col-md-4 col-lg-3 mx-auto rounded-4 mt-5 d-flex flex-column"
-      >
-        <div
-          id="card"
-          class="card-body py-0 d-flex justify-content-between flex-column"
-        >
+      <!-- Input Group -->
+      <div class="input-group mb-3 mt-2 w-50">
+        <input type="number" min="150" id="inputW" class="form-control text-end" placeholder="Width" aria-label="Width">
+        <span class="input-group-text"> </span>
+        <input type="number" min="214" id="inputH" class="form-control" placeholder="Height" aria-label="Height">
+      </div>
+      <!-- Card -->
+      <div class="mx-auto mt-2 d-flex flex-column">
+        <div id="card" class="card card-container rounded-4 card-body py-0 px-3 d-flex justify-content-between flex-column">
           <!-- CONTENT -->
         </div>
       </div>
-      <div
-        class="mt-3 d-flex justify-content-center align-items-center w-50 gap-2"
-      >
+      <div class="sticky-bottom mt-5 d-flex top-100 start-50 translate-middle justify-content-center align-items-center gap-2">
+        <!-- Button and counter -->
         <button id="button" class="btn btn-dark p-2 px-4">
           Get New Card
         </button>
-        <div class="counter alert alert-info m-0">
-          <p class="fs-4 fw-bold m-0" p-2 id="counter"></p>
+        <div class="counter alert alert-info m-0 text-center p-0">
+          <p class="fs-4 fw-bold p-1 m-0" p-0 id="counter"></p>
         </div>
       </div>
     </div>
